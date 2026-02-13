@@ -5,7 +5,6 @@ CREATE TABLE users (
     country VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100),
@@ -13,7 +12,6 @@ CREATE TABLE products (
     price DECIMAL(10, 2),
     stock INT
 );
-
 CREATE TABLE orders (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id),
